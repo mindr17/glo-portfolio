@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
+    index: "./src/index.ts",
   },
   module: {
     rules: [
@@ -64,8 +64,8 @@ module.exports = {
     filename: "[name].bundle.js",
     assetModuleFilename: "[path]/[name][ext]",
     chunkFilename: '[id].[chunkhash].js',
-    // path: path.resolve(__dirname, "../"),
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "."),
+    // path: path.resolve(__dirname, "dist"),
     publicPath: "auto",
     clean: false,
   },
